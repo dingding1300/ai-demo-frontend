@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI图像生成演示项目</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="header">
+        <h1>AI图像生成演示项目</h1>
+        <p class="student-info">学号：202535720133 &nbsp;&nbsp; 姓名：周俊旭</p>
+    </div>
+
+    <!-- AI参数调整区（满足可调整参数要求） -->
+    <div class="control-panel">
+        <h2>参数调整</h2>
+        <div class="param-item">
+            <label for="prompt">提示词（Prompt）：</label>
+            <input type="text" id="prompt" placeholder="例如：一只可爱的猫咪，赛博朋克风格" value="赛博朋克风格的猫咪">
+        </div>
+        <div class="param-item">
+            <label for="size">图片尺寸：</label>
+            <select id="size">
+                <option value="512x512">512×512</option>
+                <option value="768x512">768×512（横版）</option>
+                <option value="512x768">512×768（竖版）</option>
+            </select>
+        </div>
+        <div class="param-item">
+            <label for="steps">生成步数：</label>
+            <input type="number" id="steps" min="10" max="50" value="20">
+        </div>
+        <button id="generateBtn">生成图片</button>
+    </div>
+
+    <!-- 结果展示区 -->
+    <div class="result-panel">
+        <h2>生成结果</h2>
+        <div id="imageContainer" class="image-container"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
